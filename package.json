@@ -1,0 +1,42 @@
+{
+  "name": "initialize",
+  "version": "0.0.1",
+  "description": "Easy application initialization for Node.js.",
+  "keywords": [
+    "init",
+    "boot",
+    "startup"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jaredhanson/initialize.git"
+  },
+  "bugs": {
+    "url": "http://github.com/jaredhanson/initialize/issues"
+  },
+  "author": {
+    "name": "Jared Hanson",
+    "email": "jaredhanson@gmail.com",
+    "url": "http://www.jaredhanson.net/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./lib",
+  "dependencies": {
+    "debug": "0.7.x"
+  },
+  "devDependencies": {
+    "mocha": "1.x.x",
+    "chai": "1.x.x"
+  },
+  "scripts": {
+    "test": "NODE_PATH=./lib node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js test/**/*.test.js"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  }
+}
