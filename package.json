@@ -1,18 +1,18 @@
 {
-  "name": "initialize",
-  "version": "0.0.1",
+  "name": "bootable",
+  "version": "0.0.2",
   "description": "Easy application initialization for Node.js.",
   "keywords": [
-    "init",
     "boot",
+    "init",
     "startup"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/jaredhanson/initialize.git"
+    "url": "git://github.com/jaredhanson/bootable.git"
   },
   "bugs": {
-    "url": "http://github.com/jaredhanson/initialize/issues"
+    "url": "http://github.com/jaredhanson/bootable/issues"
   },
   "author": {
     "name": "Jared Hanson",
