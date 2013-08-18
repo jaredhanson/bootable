@@ -7,7 +7,7 @@
 Bootable is an extensible initialization layer for [Node.js](http://nodejs.org/)
 applications.
 
-Bootlable allows initialization *phases* to be registered for an application.
+Bootable allows initialization *phases* to be registered for an application.
 These phases will be executed sequentially during startup, after which the
 application will be ready to run.
 
@@ -24,7 +24,7 @@ applications.
 
 #### Mixin Bootable
 
-Create a new application and mixin the bootable modules.
+Create a new application and mixin the bootable module.
 
 ```javascript
 var express = require('express')
@@ -42,7 +42,7 @@ An application proceeds through a sequence of phases, in order to prepare
 itself to handle requests.  Modules need to be configured, databases need to be
 connected, and routes need to be drawn.
 
-Bootable packages phases for the common scenarios:
+Bootable packages phases for these common scenarios:
 
 ```javascript
 app.phase(bootable.initializers('config/initializers'));
@@ -54,14 +54,14 @@ asynchronous flavors:
 
 ```
 app.phase(function() {
-    // synchronous phase
+  // synchronous phase
 });
 
 app.phase(function(done) {
-    setTimeout(function() {
-        // asynchronous phase
-        done();
-    }, 1000);
+  setTimeout(function() {
+    // asynchronous phase
+    done();
+  }, 1000);
 });
 ```
 
