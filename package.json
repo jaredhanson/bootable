@@ -1,6 +1,6 @@
 {
   "name": "bootable",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Easy application initialization for Node.js.",
   "keywords": [
     "boot",
