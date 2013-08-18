@@ -5,7 +5,8 @@
   "keywords": [
     "boot",
     "init",
-    "startup"
+    "startup",
+    "express"
   ],
   "repository": {
     "type": "git",
