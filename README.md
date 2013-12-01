@@ -78,8 +78,8 @@ app.boot(function(err) {
 });
 ```
 
-This is allows you to split off your initialization steps into separate,
-organized and reusable chunks of logic.
+This allows you to split off your initialization steps into separate, organized
+and reusable chunks of logic.
 
 ## Tests
 
