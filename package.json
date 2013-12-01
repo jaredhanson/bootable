@@ -8,17 +8,17 @@
     "startup",
     "express"
   ],
+  "author": {
+    "name": "Jared Hanson",
+    "email": "jaredhanson@gmail.com",
+    "url": "http://www.jaredhanson.net/"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/jaredhanson/bootable.git"
   },
   "bugs": {
     "url": "http://github.com/jaredhanson/bootable/issues"
-  },
-  "author": {
-    "name": "Jared Hanson",
-    "email": "jaredhanson@gmail.com",
-    "url": "http://www.jaredhanson.net/"
   },
   "licenses": [
     {
@@ -35,10 +35,10 @@
     "mocha": "1.x.x",
     "chai": "1.x.x"
   },
-  "scripts": {
-    "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
-  },
   "engines": {
     "node": ">= 0.4.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
   }
 }
