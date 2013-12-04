@@ -1,7 +1,9 @@
 # Bootable
 
-[![Build](https://travis-ci.org/jaredhanson/bootable.png)](http://travis-ci.org/jaredhanson/bootable)
-[![Dependencies](https://david-dm.org/jaredhanson/bootable.png)](http://david-dm.org/jaredhanson/bootable)
+[![Build](https://travis-ci.org/jaredhanson/bootable.png)](https://travis-ci.org/jaredhanson/bootable)
+[![Coverage](https://coveralls.io/repos/jaredhanson/bootable/badge.png)](https://coveralls.io/r/jaredhanson/bootable)
+[![Quality](https://codeclimate.com/github/jaredhanson/bootable.png)](https://codeclimate.com/github/jaredhanson/bootable)
+[![Dependencies](https://david-dm.org/jaredhanson/bootable.png)](https://david-dm.org/jaredhanson/bootable)
 
 
 Bootable is an extensible initialization layer for [Node.js](http://nodejs.org/)
