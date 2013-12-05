@@ -58,4 +58,50 @@ describe('phases/initializers', function() {
     });
   });
   
+  describe('phase with initializer that calls done with error', function() {
+    var app = new Object();
+    app.order = [];
+    
+    var error;
+    
+    before(function(done) {
+      var phase = initializers(__dirname + '/../data/initializers/error-done');
+      phase.call(app, function(err) {
+        error = err;
+        return done();
+      });
+    })
+    
+    it('should call callback', function() {
+      expect(error).to.be.an.instanceOf(Error);
+      expect(error.message).to.equal('something went wrong');
+    });
+    it('should halt initializers after error', function() {
+      expect(app.order).to.have.length(0);
+    });
+  });
+  
+  describe('phase with initializer that throws exception', function() {
+    var app = new Object();
+    app.order = [];
+    
+    var error;
+    
+    before(function(done) {
+      var phase = initializers(__dirname + '/../data/initializers/error-throw');
+      phase.call(app, function(err) {
+        error = err;
+        return done();
+      });
+    })
+    
+    it('should call callback', function() {
+      expect(error).to.be.an.instanceOf(Error);
+      expect(error.message).to.equal('something went horribly wrong');
+    });
+    it('should halt initializers after error', function() {
+      expect(app.order).to.have.length(0);
+    });
+  });
+  
 });
