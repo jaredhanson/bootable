@@ -1,6 +1,6 @@
 var Initializer = require('../lib/initializer');
 
-describe('Initialzier', function() {
+describe('Initializer', function() {
     
   describe('without phases', function() {
     var initializer = new Initializer();
