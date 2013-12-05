@@ -1,3 +1,5 @@
+/* global describe, it, expect */
+
 var bootable = require('..');
 
 describe('bootable', function() {

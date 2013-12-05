@@ -1,3 +1,5 @@
+/* global describe, it, before, expect */
+
 var Initializer = require('../lib/initializer');
 
 describe('Initializer', function() {
@@ -11,7 +13,7 @@ describe('Initializer', function() {
         error = err;
         return done();
       });
-    })
+    });
     
     it('should call callback', function() {
       expect(error).to.be.undefined;
@@ -35,7 +37,7 @@ describe('Initializer', function() {
           error = err;
           return done();
         });
-      })
+      });
     
       it('should call callback', function() {
         expect(error).to.be.undefined;
@@ -62,7 +64,7 @@ describe('Initializer', function() {
           error = err;
           return done();
         }, ctx);
-      })
+      });
     
       it('should call callback', function() {
         expect(error).to.be.undefined;
@@ -86,7 +88,7 @@ describe('Initializer', function() {
           error = err;
           return done();
         });
-      })
+      });
     
       it('should call callback with error', function() {
         expect(error).to.be.an.instanceOf(Error);
@@ -107,7 +109,7 @@ describe('Initializer', function() {
           var name = self !== global ? self.name : 'global';
           order.push('1:' + name);
           return done();
-        })
+        });
       });
     
       var error;
@@ -117,7 +119,7 @@ describe('Initializer', function() {
           error = err;
           return done();
         });
-      })
+      });
     
       it('should call callback', function() {
         expect(error).to.be.undefined;
@@ -138,7 +140,7 @@ describe('Initializer', function() {
           var name = self !== global ? self.name : 'global';
           order.push('1:' + name);
           return done();
-        })
+        });
       });
     
       var error;
@@ -148,7 +150,7 @@ describe('Initializer', function() {
           error = err;
           return done();
         }, ctx);
-      })
+      });
     
       it('should call callback', function() {
         expect(error).to.be.undefined;
@@ -174,7 +176,7 @@ describe('Initializer', function() {
           error = err;
           return done();
         });
-      })
+      });
     
       it('should call callback with error', function() {
         expect(error).to.be.an.instanceOf(Error);
@@ -195,7 +197,7 @@ describe('Initializer', function() {
           error = err;
           return done();
         });
-      })
+      });
     
       it('should call callback with error', function() {
         expect(error).to.be.an.instanceOf(Error);
@@ -220,7 +222,7 @@ describe('Initializer', function() {
           var name = self !== global ? self.name : 'global';
           order.push('2:' + name);
           return done();
-        })
+        });
       });
       initializer.phase(function() {
         var name = this !== global ? this.name : 'global';
@@ -234,7 +236,7 @@ describe('Initializer', function() {
           error = err;
           return done();
         });
-      })
+      });
     
       it('should call callback', function() {
         expect(error).to.be.undefined;
@@ -255,10 +257,9 @@ describe('Initializer', function() {
         order.push('1:' + name);
       });
       initializer.phase(function(done) {
-        var self = this;
         process.nextTick(function() {
           return done(new Error('something went wrong'));
-        })
+        });
       });
       initializer.phase(function() {
         var name = this !== global ? this.name : 'global';
@@ -272,7 +273,7 @@ describe('Initializer', function() {
           error = err;
           return done();
         });
-      })
+      });
     
       it('should call callback with error', function() {
         expect(error).to.be.an.instanceOf(Error);

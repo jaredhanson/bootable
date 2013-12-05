@@ -1,3 +1,5 @@
+/* global describe, it, expect */
+
 var routes = require('../../lib/phases/routes');
 
 describe('phases/routes', function() {

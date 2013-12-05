@@ -1,3 +1,5 @@
+/* global describe, it, before, expect */
+
 var bootable = require('..');
 
 describe('mixin', function() {
@@ -33,7 +35,7 @@ describe('mixin', function() {
           var name = self !== global ? self.name : 'global';
           order.push('2:' + name);
           return done();
-        })
+        });
       });
       app.phase(function() {
         var name = this !== global ? this.name : 'global';
@@ -48,7 +50,7 @@ describe('mixin', function() {
           error = err;
           return done();
         });
-      })
+      });
     
       it('should call callback', function() {
         expect(error).to.be.undefined;
@@ -77,7 +79,7 @@ describe('mixin', function() {
         var name = self !== global ? self.name : 'global';
         order.push('2:' + name);
         return done();
-      })
+      });
     }
     function phase3() {
       var name = this !== global ? this.name : 'global';
@@ -94,7 +96,7 @@ describe('mixin', function() {
           error = err;
           return done();
         });
-      })
+      });
     
       it('should call callback', function() {
         expect(error).to.be.undefined;

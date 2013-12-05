@@ -1,3 +1,5 @@
+/* global describe, it, before, expect */
+
 var initializers = require('../../lib/phases/initializers');
 
 describe('phases/initializers', function() {
@@ -21,7 +23,7 @@ describe('phases/initializers', function() {
         delete global.__app;
         return done();
       });
-    })
+    });
     
     it('should call callback', function() {
       expect(error).to.be.undefined;
@@ -46,7 +48,7 @@ describe('phases/initializers', function() {
         error = err;
         return done();
       });
-    })
+    });
     
     it('should call callback', function() {
       expect(error).to.be.undefined;
@@ -70,7 +72,7 @@ describe('phases/initializers', function() {
         error = err;
         return done();
       });
-    })
+    });
     
     it('should call callback', function() {
       expect(error).to.be.an.instanceOf(Error);
@@ -93,7 +95,7 @@ describe('phases/initializers', function() {
         error = err;
         return done();
       });
-    })
+    });
     
     it('should call callback', function() {
       expect(error).to.be.an.instanceOf(Error);
