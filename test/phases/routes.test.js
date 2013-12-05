@@ -14,7 +14,7 @@ describe('phases/routes', function() {
     };
     
     var phase = routes(__dirname + '/../data/routes/test');
-    phase.apply(app);
+    phase.call(app);
     
     it('should draw routes', function() {
       expect(Object.keys(app.routes)).to.have.length(1);
