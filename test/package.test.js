@@ -17,4 +17,9 @@ describe('bootable', function() {
     expect(bootable.routes).to.be.a('function');
   });
   
+  it('should export DI phases', function() {
+    expect(bootable.di.initializers).to.be.a('function');
+    expect(bootable.di.routes).to.be.a('function');
+  });
+  
 });
