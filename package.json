@@ -29,8 +29,9 @@
   "main": "./lib",
   "dependencies": {
     "bootable-di": "0.1.x",
+    "debug": "0.7.x",
     "scripts": "0.1.x",
-    "debug": "0.7.x"
+    "utils-merge": "1.x.x"
   },
   "devDependencies": {
     "mocha": "1.x.x",
